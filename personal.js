@@ -1,5 +1,5 @@
 var typed = new Typed("#multiple-text", {
-  strings: ["Frontend Developer", "Programmer", "Designer", "Student"],
+  strings: ["FrontEnd Developer", "Programmer", "Designer", "Student"],
   typeSpeed: 100,
   backSpeed: 50,
   backDelay: 1000,
@@ -9,10 +9,23 @@ var typed = new Typed("#multiple-text", {
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-};
+// Toggle box menu
+document.getElementById('menu-icon').addEventListener('click', function() {
+  document.getElementById('box-menu').classList.add('active');
+});
+
+// Close box menu
+document.getElementById('close-btn').addEventListener('click', function() {
+  document.getElementById('box-menu').classList.remove('active');
+});
+
+// Detect screen size change and close box menu
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 767) {
+    document.getElementById('box-menu').classList.remove('active');
+  }
+});
+
 
 let sections = document.querySelectorAll("section");
 let navlinks = document.querySelectorAll("header nav a");
