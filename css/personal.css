@@ -61,7 +61,7 @@ section {
 }
 
 .navbar .menu li a:hover {
-    color: #0ef;
+  color: #0ef;
 }
 
 .menu-icon {
@@ -128,18 +128,18 @@ section {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 50px;
+  padding: 100px;
 }
 
 .home-img img {
-  width: 55vw;
+  width: 35vw;
   background-color: #0ef;
 }
 
 .home-content h3 {
   font-size: 3.2rem;
   font-weight: 700;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .home-content h3 span {
@@ -371,85 +371,21 @@ span {
   resize: none;
 }
 
-/* Styles for screens smaller than 768px (mobile devices) */
-@media (max-width: 767px) {
-  .header {
-    padding: 1.5rem 5%;
+/* Responsive styles */
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
   }
 
-  .logo {
-    font-size: 2rem;
+  .navbar {
+    padding: 10px 20px;
   }
 
-  .navbar a {
-    font-size: 1.4rem;
-    margin-left: 2rem;
+  .navbar .logo {
+    font-size: 20px;
   }
 
-  .home-img img {
-    width: 90%;
-  }
-
-  .home-content h3 {
-    font-size: 2.5rem;
-  }
-
-  /* Adjust other styles as needed */
-}
-
-/* Styles for screens between 768px and 1023px (tablets) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .header {
-    padding: 1.8rem 7%;
-  }
-
-  .logo {
-    font-size: 2.2rem;
-  }
-
-  .navbar a {
-    font-size: 1.6rem;
-    margin-left: 3rem;
-  }
-
-  .home-img img {
-    width: 70%;
-  }
-
-  .home-content h3 {
-    font-size: 2.8rem;
-  }
-
-  /* Adjust other styles as needed */
-}
-
-/* Styles for screens larger than 1023px (desktops) */
-@media (min-width: 1024px) {
-  .header {
-    padding: 2rem 9%;
-  }
-
-  .logo {
-    font-size: 2.5rem;
-  }
-
-  .navbar a {
-    font-size: 1.7rem;
-    margin-left: 4rem;
-  }
-
-  .home-img img {
-    width: 55vw;
-  }
-
-  .home-content h3 {
-    font-size: 3.2rem;
-  }
-
-  /* Adjust other styles as needed */
-}
-
-@media (max-width: 768px) {
   .navbar .menu {
     display: none;
   }
@@ -458,21 +394,143 @@ span {
     display: block;
   }
 
-  .box-menu {
-    display: none;
+  .box-menu .box-menu-items li a {
+    font-size: 16px;
   }
 
-  .box-menu.active {
-    display: block;
+  .home {
+    padding: 50px;
   }
 
-  .box-menu .box-menu-items {
-    justify-content: flex-start;
-    padding-top: 50px;
-    background-color: #333;
+  .home-img img {
+    width: 60vw;
   }
 
-  .box-menu .box-menu-items li {
-    margin-bottom: 10px;
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .home-content h1 {
+    font-size: 4.6rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+  .about-img img {
+    width: 60vw;
+  }
+
+  .heading {
+    font-size: 3.6rem;
+  }
+
+  .about-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-content h3 {
+    font-size: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1.4rem;
+  }
+
+  .education-container .education-box {
+    flex: 1 1 100%;
+  }
+
+  .education-box i {
+    font-size: 5rem;
+  }
+
+  .education-box h3 {
+    font-size: 2rem;
+  }
+
+  .education-box p {
+    font-size: 1.4rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills h2 {
+    font-size: 2.2rem;
+  }
+
+  .skills-layer h4 {
+    font-size: 2.4rem;
+  }
+
+  .skills-layer p {
+    font-size: 1.4rem;
+  }
+
+  .contact h2 {
+    padding-top: 3rem;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home {
+    padding: 20px;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+  }
+
+  .about-content h2 {
+    font-size: 2rem;
+  }
+
+  .about-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 1.2rem;
+  }
+
+  .education-box h3 {
+    font-size: 1.8rem;
+  }
+
+  .education-box p {
+    font-size: 1.2rem;
+  }
+
+  .skills h2 {
+    font-size: 2rem;
+  }
+
+  .skills-layer h4 {
+    font-size: 2rem;
+  }
+
+  .skills-layer p {
+    font-size: 1.2rem;
+  }
+
+  .contact form .input-box input,
+  .contact form textarea {
+    font-size: 1.2rem;
   }
 }
